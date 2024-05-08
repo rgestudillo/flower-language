@@ -34,12 +34,12 @@ export default function App() {
 
   return (
     <div className="flex flex-col bg-amber-100 items-center p-16 space-y-8 overflow-auto text-center">
-      <span className="font-bold text-5xl">Flower Name Generator</span>
-      <button className="btn btn-primary" onClick={handleGenerate}>
-        Generate
-      </button>
-      <div className=" flex flex-col lg:flex-row lg:space-x-8 ">
-        <div className="grid lg:grid-cols-4 grid-cols-1 gap-8 border p-8 border-black">
+      <span className="font-bold text-5xl text-slate-800">
+        Flower Name Generator
+      </span>
+
+      <div className="flex flex-col lg:flex-row lg:space-x-8">
+        <div className="grid lg:grid-cols-4 grid-cols-2 gap-4 border p-8 border-black">
           {(() => {
             const items = [];
             const letters = [
@@ -75,7 +75,7 @@ export default function App() {
               items.push(
                 <div
                   key={i}
-                  className="card bg-transparent shadow-xl stack"
+                  className="card bg-white shadow-xl stack"
                   onClick={() => handleClick(letter)}
                 >
                   <figure>
@@ -122,6 +122,9 @@ export default function App() {
               </div>
             </div>
           </div>
+          <button className="btn btn-primary" onClick={handleGenerate}>
+            Generate
+          </button>
         </div>
       </div>
     </div>
