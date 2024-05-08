@@ -27,7 +27,7 @@ export default function App() {
     takeScreenshot().then((image) => {
       const a = document.createElement("a");
       a.href = image;
-      a.download = "screenshot.jpg";
+      a.download = "screenshot";
       a.click();
     });
   };
